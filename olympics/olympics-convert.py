@@ -1,6 +1,7 @@
 #CS257 database design
 #10.11.2022
 #Mihael Xia
+#get athlete_events.csv and noc_regions.csv file and put them in the same folder to run this program
 
 import csv
 
