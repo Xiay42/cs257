@@ -1,58 +1,6 @@
-'''
-    convert.py
-    Jeff Ondich, 15 Oct 2021
-    Started in class, polished later
-
-    Illustrating how to use Python dictionaries, etc. to
-    start converting the data. This is based on the Kaggle
-    Olympics data, and assumes you have a copy of the
-    athlete_events.csv file.
-
-    In this small example, I am imagining three tables as shown
-    below. The point of this code sample is to illustrate how you
-    could connect the event_results table's ID fields to the
-    appropriate IDs in the athletes and events tables.
-
-    # Like "Simone Arianne Biles"
-    CREATE TABLE athletes (
-        id INTEGER,
-        name TEXT
-    );
-
-    # Like "Gymnastics Women's Individual All-Around"
-    CREATE TABLE events (
-        id INTEGER,
-        name TEXT
-    );
-
-    # One row represents one athlete competing in one event
-    # at one time.
-    CREATE TABLE event_results (
-        athlete_id INTEGER,
-        event_id INTEGER,
-        medal TEXT
-    );
-
-    When I run this code, I end up with three new files: athletes.csv,
-    events.csv, and event_results.csv. One of the lines of athletes.csv is:
-
-        11495,Simone Arianne Biles
-
-    One of the rows in events.csv is:
-
-        213,Gymnastics Women's Individual All-Around
-
-    And one of the rows in event_results.csv is:
-
-        11495,213,Gold
-
-    When you combine those three rows from three different tables, you can
-    conclude that Simone Biles won the Gold medal in the
-    Gymnastics Women's Individual All-Around. This sample program hasn't
-    included year information or city information or anything like that.
-    But I hope this code helps you understand one way to approach converting
-    raw data into structured tabular data.
-'''
+#CS257 database design
+#10.11.2022
+#Mihael Xia
 
 import csv
 
