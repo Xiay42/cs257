@@ -1,0 +1,29 @@
+NAME
+     olympics.py– search atheletes, NOCs and Gold medals from small dataset (phase 1)
+     Yiming Xia
+
+SYNOPSIS
+     python3 olympics.py NOC_atheletes [-h] --searchWord string
+     python3 olympics.py NOCs_Gmedals [-h]
+     python3 olympics.py NOC_Gmedals [-h] --searchWord string
+
+DESCRIPTION
+
+For NOC_atheletes:
+	Given a search string print a list of atheletes that belongs to that NOC (case-insensitive).
+
+For NOCs_Gmedals:
+	Prints all the NOCs and the Gold medals they've won, (case-insensitive). Printed in decending order.
+
+For NOC_Gmedals:
+	Given a search string, prints all the athletes in that NOC.
+	
+OPTIONS
+
+General:
+	-H, --Help	Prints usage statement
+
+
+
+
+
