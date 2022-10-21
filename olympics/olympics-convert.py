@@ -80,7 +80,7 @@ with open('noc_regions.csv') as original_data_file,\
         if noc not in nocs:
             noc_id = len(nocs) + 1
             nocs[noc] = noc_id
-            writer.writerow([noc_id, noc, region])
+            writer.writerow([noc_id, noc.lower(), region])
 
 # (3) For each row in the original athlete_events.csv file, build a row
 #       for our new event_results.csv table
