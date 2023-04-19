@@ -1,0 +1,101 @@
+/* CS257 mockup */
+/* Written by Yiming Xia */
+/* 11.3.2022 */
+
+
+/* HEADINGS AND PARAGRAPHS */
+
+p {
+    color: white;
+    font-size: larger;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+    padding: 20px, 5px;
+}
+
+a {
+    color: white;
+    font-size: x-large;
+    /* background-color: rgb(25, 140, 71); */
+}
+
+.container{
+    width: 80%;
+    size-adjust: auto;
+    margin: 3 auto;
+    /* background-image: url(/cars.jpg); */
+}
+
+
+
+
+
+/* NAVBAR */
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+nav{
+    text-align:center;
+    margin-top: 60px;
+    color:aliceblue;
+    font-size: large;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(25, 140, 71);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #ffffff;
+    color: rgb(25, 140, 71);
+  }
+
+nav a{
+    text-decoration: none;
+}
+
+
+
+
+
+/* BACKGROUND */
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9)), url(images/car.jpg);
+}
+
+.logo{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+} 

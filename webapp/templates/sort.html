@@ -1,0 +1,40 @@
+<!-- CS257 mockup -->
+<!-- Written by Yiming Xia and Xiaoying Qu -->
+<!-- 11.3.2022 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../static/sort.css" />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='carsSort.js') }}"
+    ></script>
+  </head>
+
+  <body>
+    <!-- website_name -->
+    <h2 id="title">HungeryCars</h2>
+    <!-- navbar -->
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/api/help">Help</a>
+      <a class="active" href="/sort">Sort</a>
+      <a href="/search">Search</a>
+    </div>
+    <p>SELECT ONE SORT PARAMETER</p>
+    <!-- aort-parameters -->
+    <div class="container1">
+      <li>
+        <a href="#" id="fuel_consumption">fuel_consumption</a>
+        <a href="#" id="co2_emission">co2_emission</a>
+        <a href="#" id="engine_size">engine_size</a>
+      </li>
+    </div>
+    <!-- carlist -->
+    <div class="container2">
+      <div id="car_list"></div>
+    </div>
+  </body>
+</html>

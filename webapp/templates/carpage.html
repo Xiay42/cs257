@@ -1,0 +1,42 @@
+<!-- CS257 mockup -->
+<!-- Written by Yiming Xia and Xiaoying Qu -->
+<!-- Car page -->
+<!-- 11.3.2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="../static/carpage.css" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='carpage.css')}}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hungry Cars</h2>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/api/help">Help</a>
+      <a href="/sort">Sort</a>
+      <a href="/search">Search</a>
+    </div>
+    <!-- <p>{{list}}</p> -->
+    <p id="carAttribute:model">model: {{model}}</p>
+    <p id="carAttribute:make">make: {{make}}</p>
+    <p id="carAttribute:class">class: {{carClass}}</p>
+    <p id="carAttribute:engine">engine: {{engine}}</p>
+    <p id="carAttribute:cylinder">cylinder: {{cylinder}}</p>
+    <p id="carAttribute:fueltype">fueltype: {{fueltype}}</p>
+    <p id="carAttribute:fuelConsumption">
+      fuelConsumption: {{fuelConsumption}}
+    </p>
+    <p id="carAttribute:co2Emission">co2Emission: {{co2Emission}}</p>
+    <p id="carAttribute:co2Rating">co2Rating: {{co2Rating}}</p>
+    <p id="carAttribute:smogRating">smogRating: {{smogRating}}</p>
+  </body>
+</html>

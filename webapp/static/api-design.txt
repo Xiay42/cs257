@@ -1,0 +1,85 @@
+# written by Yiming Xia
+# API design
+
+SEARCH BAR:
+REQUEST: /search/<model>
+GET parameters
+    model (Required) -- returns a list of car name with
+                        reference link to the specific car model.
+                        The input is a string.
+RESPONSE: a
+
+REQUEST: /model?model_contains={search_text}
+
+RESPONSE: a JSON dictionary that represents one car model. The dictionary will have the following fields:
+Make -- (string) the make of this car model (brand)	Vehicle_class -- (string) the vehicle class of this car model
+Engine_size -- (int) size of engine
+Cylinder -- (int) how many cylinder
+Fuel_type -- (chr) X,Z,D,E stands for different types of fuel
+Fuel_consumption_city -- (int) fuel consumption in city for this model
+Fuel_consumption_hwy -- (int) fuel consumption on highway for this model
+Fuel_consumption_comb -- (int) total fuel consumption for this model
+Co2_rating -- (int) how co2 efficient is this model
+Smong_rating -- (int) how smog efficient is this model
+
+EXAMPLE: /model?model_contains=MDX
+{"make": "Acura", "vehicle_class": "SUV:small", "Engine_size": "3.5", "Cylinders": "6", "Fuel_type": "Z", "Fuel_consumption_city": "12.6", "Fuel_consumption_hwy": "9.4", "Fuel_consumption_comb": "11.2", "co2_emission": "263", "co2_rating": "4", "smog_rating": "5"}
+
+
+
+REQUEST: /sort/api/fuel_consumption
+RESPONSE: a 20-item list of TEXT of car make and model
+            sorted by descending fuel consumption rating
+EXAMPLE:
+    /fuel_consumption
+        [Aston Martin DB11 V12 94
+        Aston Martin Vantage V8 94
+        Alfa Romeo Stelvio AWD 94
+        Aston Martin DB11 V8 94
+        Aston Martin DBS V12 94
+        Aston Martin DBX V8 94
+        Acura TLX Type S (Performance Tire) 94
+        Alfa Romeo Stelvio 94
+        Alfa Romeo Stelvio AWD Quadrifoglio 94
+        Acura RDX SH-AWD A-SPEC 94
+        Acura MDX SH-AWD 94
+        Acura ILX 94
+        Alfa Romeo Giulia 94
+        Acura TLX SH-AWD 94
+        Acura TLX SH-AWD A-SPEC 94
+        Acura TLX Type S 94
+        Alfa Romeo Giulia AWD 94
+        Alfa Romeo Giulia Quadrifoglio 94
+        Acura RDX SH-AWD 94
+        Audi A3 Sedan 40 TFSI quattro 94]
+
+
+REQUEST: sort/api/co2_emission
+RESPONSE: a 20-item list of TEXT of car make and model
+            sorted by descending co2 emission data
+EXAMPLE:
+    /co2_emission
+        [Ford Transit Connect Wagon LWB FFV 4
+        Ford Transit Connect Wagon LWB FFV 4
+        Ford Transit Connect Wagon LWB 4.2
+        Ford Transit Connect Van 4.4
+        Nissan Maxima 4.5
+        Mitsubishi Outlander 4WD 4.5
+        Honda Civic Sedan Si 4.6
+        Nissan Murano AWD 4.8
+        MINI Cooper S Countryman ALL4 4.9
+        GMC Acadia AWD 5
+        Ford F-150 4X4 FFV (Without Stop-Start) 5
+        Ford F-150 4X4 FFV (Without Stop-Start) 5
+        MINI John Cooper Works 3 Door 5.1
+        MINI John Cooper Works 3 Door 5.1
+        Infiniti Q60 AWD 5.3
+        Honda CR-V 5.3
+        Ford F-150 Raptor 4X4 5.5
+        Chevrolet Suburban 4WD 5.8
+        Chevrolet Suburban 4WD (No Stop-Start) 5.9
+        Jeep Cherokee 4X4 Active Drive Lock 6]
+
+
+REQUEST: sort/api/help
+RESPONSE: This txt document
